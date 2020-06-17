@@ -23,6 +23,13 @@ public class QuartoController {
         List<Quarto> quartosParaLimpeza = quartoService.getListaDeQuartosParaLimpeza();
         return ResponseEntity.ok(quartosParaLimpeza);
     }
+    @GetMapping("limpos")
+    public ResponseEntity<List<Quarto>> getQuartosLimpos(){
+        List<Quarto> quartosLimpos = quartoService.getListaDeQuartosLimpos();
+
+        return  ResponseEntity.ok(quartosLimpos);
+
+    }
 
     @PostMapping("quartos-para-limpeza/{quartoId}/limpo")
     public ResponseEntity<?> limparQuarto(@PathVariable Long quartoId) {

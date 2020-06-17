@@ -11,4 +11,6 @@ public interface QuartoRepository extends JpaRepository<Quarto, Long> {
 
     public List<Quarto> findByEstaOcupadoFalseAndEstaLimpoFalse();
 
+    public List<Quarto> findByEstaOcupadoFalseAndEstaLimpoTrue();
+
 }
